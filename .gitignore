@@ -1,0 +1,25 @@
+# Python
+
+venv/
+__pycache__/
+*.pyc
+
+# Database
+
+*.db
+
+# Node Modules
+
+node_modules/
+
+# Environment Files
+
+.env
+
+# VS Code
+
+.vscode/
+
+# Logs
+
+npm-debug.log*
