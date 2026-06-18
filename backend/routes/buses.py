@@ -2,6 +2,9 @@ from fastapi import APIRouter
 
 from database import conn, cursor
 
+from logger import logger
+from config.bug_config import BUG_CONFIG
+
 import random
 
 router = APIRouter()
@@ -124,11 +127,37 @@ def get_buses():
 
     buses = cursor.fetchall()
 
+    logger.info(
+        f"Buses fetched | count={len(buses)}"
+    )
+
     return [dict(bus) for bus in buses]
 
 @router.post("/book-bus")
 
 def book_bus(data: dict):
+    logger.info(
+        f"Bus booking request received | "
+        f"user={data.get('user_name')} | "
+        f"bus_id={data.get('bus_id')} | "
+        f"passengers={data.get('passengers')}"
+    )
+
+    if (
+        not BUG_CONFIG["allow_negative_passengers"]
+        and data["passengers"] <= 0
+    ):
+
+        logger.warning(
+            f"Bus booking failed | "
+            f"reason=Invalid Passenger Count | "
+            f"requested={data['passengers']}"
+        )
+
+        return {
+            "message":
+            "Passenger count must be greater than 0"
+        }
 
     cursor.execute("""
 
@@ -141,12 +170,25 @@ def book_bus(data: dict):
 
     if not bus:
 
+        logger.warning(
+            f"Bus booking failed | "
+            f"reason=Bus Not Found | "
+            f"bus_id={data.get('bus_id')}"
+        )
+
         return {
             "message":
             "Bus Not Found"
         }
 
     if bus["seats"] < data["passengers"]:
+
+        logger.warning(
+            f"Bus booking failed | "
+            f"reason=Not Enough Seats | "
+            f"available={bus['seats']} | "
+            f"requested={data['passengers']}"
+        )
 
         return {
             "message":
@@ -216,6 +258,13 @@ def book_bus(data: dict):
     ))
 
     conn.commit()
+
+    logger.info(
+        f"Bus booked successfully | "
+        f"booking_id={booking_id} | "
+        f"pnr={pnr} | "
+        f"remaining_seats={updated_seats}"
+    )
 
     return {
         "message":

@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from database import conn, cursor
+from logger import logger
 
 router = APIRouter()
 
@@ -50,6 +51,8 @@ if count == 0:
 @router.get("/flights")
 
 def get_flights():
+
+    logger.info("Flights fetched")
 
     cursor.execute("SELECT * FROM flights")
 

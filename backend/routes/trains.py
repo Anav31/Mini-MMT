@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-
+from logger import logger
 from database import conn, cursor
-
+from config.bug_config import BUG_CONFIG
 import random
 
 router = APIRouter()
@@ -184,12 +184,37 @@ def get_trains():
 
     trains = cursor.fetchall()
 
-    return [dict(train)
-            for train in trains]
+    logger.info(
+        f"Trains fetched | count={len(trains)}"
+    )
+
+    return [dict(train) for train in trains]
 
 @router.post("/book-train")
 
 def book_train(data: dict):
+    logger.info(
+        f"Train booking request received | "
+        f"user={data.get('user_name')} | "
+        f"train_id={data.get('train_id')} | "
+        f"passengers={data.get('passengers')}"
+    )
+
+    if (
+        not BUG_CONFIG["allow_negative_passengers"]
+        and data["passengers"] <= 0
+    ):
+
+        logger.warning(
+            f"Train booking failed | "
+            f"reason=Invalid Passenger Count | "
+            f"requested={data['passengers']}"
+        )
+
+        return {
+            "message":
+            "Passenger count must be greater than 0"
+        }
 
     cursor.execute("""
 
@@ -202,12 +227,25 @@ def book_train(data: dict):
 
     if not train:
 
+        logger.warning(
+            f"Train booking failed | "
+            f"reason=Train Not Found | "
+            f"train_id={data.get('train_id')}"
+        )
+
         return {
             "message":
             "Train Not Found"
         }
 
     if train["seats"] < data["passengers"]:
+
+        logger.warning(
+            f"Train booking failed | "
+            f"reason=Not Enough Seats | "
+            f"available={train['seats']} | "
+            f"requested={data['passengers']}"
+        )
 
         return {
             "message":
@@ -285,6 +323,13 @@ def book_train(data: dict):
     ))
 
     conn.commit()
+
+    logger.info(
+        f"Train booked successfully | "
+        f"booking_id={booking_id} | "
+        f"pnr={pnr} | "
+        f"remaining_seats={updated_seats}"
+    )
 
     return {
         "message":

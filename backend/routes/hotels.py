@@ -2,6 +2,8 @@ from fastapi import APIRouter
 
 from database import conn, cursor
 
+from logger import logger
+from config.bug_config import BUG_CONFIG
 import random
 
 router = APIRouter()
@@ -138,6 +140,9 @@ def get_hotels():
     )
 
     hotels = cursor.fetchall()
+    logger.info(
+        f"Hotels fetched | count={len(hotels)}"
+    )
 
     return [
         dict(hotel)
@@ -150,6 +155,29 @@ def get_hotels():
 
 def book_hotel(data: dict):
 
+    logger.info(
+        f"Hotel booking request received | "
+        f"user={data.get('user_name')} | "
+        f"hotel_id={data.get('hotel_id')} | "
+        f"rooms_requested={data.get('rooms_booked')}"
+    )
+
+    if (
+        not BUG_CONFIG["allow_negative_rooms"]
+        and data["rooms_booked"] <= 0
+    ):
+
+        logger.warning(
+            f"Hotel booking failed | "
+            f"reason=Invalid Room Count | "
+            f"requested={data['rooms_booked']}"
+        )
+
+        return {
+            "message":
+            "Rooms booked must be greater than 0"
+        }
+
     cursor.execute("""
 
     SELECT * FROM hotels
@@ -161,12 +189,25 @@ def book_hotel(data: dict):
 
     if not hotel:
 
+        logger.warning(
+            f"Hotel booking failed | "
+            f"reason=Hotel Not Found | "
+            f"hotel_id={data.get('hotel_id')}"
+        )
+
         return {
             "message":
             "Hotel Not Found"
         }
 
     if hotel["rooms"] < data["rooms_booked"]:
+
+        logger.warning(
+            f"Hotel booking failed | "
+            f"reason=Not Enough Rooms | "
+            f"available={hotel['rooms']} | "
+            f"requested={data['rooms_booked']}"
+        )
 
         return {
             "message":
@@ -238,6 +279,13 @@ def book_hotel(data: dict):
     ))
 
     conn.commit()
+    logger.info(
+        f"Hotel booked successfully | "
+        f"booking_id={booking_id} | "
+        f"pnr={pnr} | "
+        f"user={data['user_name']} | "
+        f"remaining_rooms={updated_rooms}"
+    )
 
     return {
         "message":
@@ -255,6 +303,10 @@ def get_hotel_bookings():
     )
 
     bookings = cursor.fetchall()
+    logger.info(
+        f"Hotel bookings fetched | "
+        f"count={len(bookings)}"
+    )
 
     return [
         dict(b)
@@ -267,9 +319,11 @@ def get_hotel_bookings():
     "/cancel-hotel/{booking_id}"
 )
 
-def cancel_hotel_booking(
-    booking_id: str
-):
+def cancel_hotel_booking(booking_id: str):
+    logger.info(
+        f"Hotel cancellation request received | "
+        f"booking_id={booking_id}"
+    )
 
     cursor.execute("""
 
@@ -281,6 +335,12 @@ def cancel_hotel_booking(
     booking = cursor.fetchone()
 
     if not booking:
+
+        logger.warning(
+            f"Hotel cancellation failed | "
+            f"reason=Booking Not Found | "
+            f"booking_id={booking_id}"
+        )
 
         return {
             "message":
@@ -326,6 +386,12 @@ def cancel_hotel_booking(
     """, (booking_id,))
 
     conn.commit()
+
+    logger.info(
+        f"Hotel booking cancelled | "
+        f"booking_id={booking_id} | "
+        f"restored_rooms={booking['rooms_booked']}"
+    )
 
     return {
         "message":

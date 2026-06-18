@@ -1,37 +1,68 @@
 from fastapi import APIRouter
-
+from config.bug_config import BUG_CONFIG
 from database import conn, cursor
+from logger import logger
 
 import random
 
 router = APIRouter()
 
-def generate_pnr():
 
+def generate_pnr():
     return "MMT" + str(
         random.randint(10000, 99999)
     )
 
-def generate_booking_id():
 
+def generate_booking_id():
     return "BK" + str(
         random.randint(1000, 9999)
     )
 
-@router.post("/book")
 
+@router.post("/book")
 def book_flight(data: dict):
 
-    cursor.execute("""
+    logger.info(
+        f"Flight booking request received | "
+        f"user={data.get('user_name')} | "
+        f"flight_id={data.get('flight_id')} | "
+        f"passengers={data.get('passengers')}"
+    )
 
-    SELECT * FROM flights
-    WHERE id = ?
+    if (
+        not BUG_CONFIG["allow_negative_passengers"]
+        and data["passengers"] <= 0
+    ):
 
-    """, (data["flight_id"],))
+        logger.warning(
+            f"Flight booking failed | "
+            f"reason=Invalid Passenger Count | "
+            f"requested={data['passengers']}"
+        )
+
+        return {
+            "message":
+            "Passenger count must be greater than 0"
+        }
+
+    cursor.execute(
+        """
+        SELECT * FROM flights
+        WHERE id = ?
+        """,
+        (data["flight_id"],)
+    )
 
     flight = cursor.fetchone()
 
     if not flight:
+
+        logger.warning(
+            f"Flight booking failed | "
+            f"reason=Flight Not Found | "
+            f"flight_id={data.get('flight_id')}"
+        )
 
         return {
             "message": "Flight Not Found"
@@ -39,9 +70,15 @@ def book_flight(data: dict):
 
     if flight["seats"] < data["passengers"]:
 
+        logger.warning(
+            f"Flight booking failed | "
+            f"reason=Not Enough Seats | "
+            f"available={flight['seats']} | "
+            f"requested={data['passengers']}"
+        )
+
         return {
-            "message":
-            "Not Enough Seats Available"
+            "message": "Not Enough Seats Available"
         }
 
     new_seats = (
@@ -49,105 +86,128 @@ def book_flight(data: dict):
         - data["passengers"]
     )
 
-    cursor.execute("""
-
-    UPDATE flights
-    SET seats = ?
-    WHERE id = ?
-
-    """, (
-        new_seats,
-        data["flight_id"]
-    ))
-
-    pnr = generate_pnr()
-
-    booking_id = generate_booking_id()
-
-    cursor.execute("""
-
-    INSERT INTO bookings (
-
-        user_id,
-        user_name,
-        flight_id,
-        airline,
-        source,
-        destination,
-        departure,
-        arrival,
-        duration,
-        passengers,
-        journey_date,
-        price,
-        pnr,
-        booking_id
-
+    cursor.execute(
+        """
+        UPDATE flights
+        SET seats = ?
+        WHERE id = ?
+        """,
+        (
+            new_seats,
+            data["flight_id"]
+        )
     )
 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    pnr = generate_pnr()
+    booking_id = generate_booking_id()
 
-    """, (
+    cursor.execute(
+        """
+        INSERT INTO bookings (
 
-        data["user_id"],
-        data["user_name"],
-        data["flight_id"],
-        data["airline"],
-        data["source"],
-        data["destination"],
-        data["departure"],
-        data["arrival"],
-        data["duration"],
-        data["passengers"],
-        data["journey_date"],
-        data["price"],
-        pnr,
-        booking_id
+            user_id,
+            user_name,
+            flight_id,
+            airline,
+            source,
+            destination,
+            departure,
+            arrival,
+            duration,
+            passengers,
+            journey_date,
+            price,
+            pnr,
+            booking_id
 
-    ))
+        )
+
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            data["user_id"],
+            data["user_name"],
+            data["flight_id"],
+            data["airline"],
+            data["source"],
+            data["destination"],
+            data["departure"],
+            data["arrival"],
+            data["duration"],
+            data["passengers"],
+            data["journey_date"],
+            data["price"],
+            pnr,
+            booking_id
+        )
+    )
 
     conn.commit()
 
+    logger.info(
+        f"Flight booked successfully | "
+        f"booking_id={booking_id} | "
+        f"pnr={pnr} | "
+        f"user={data['user_name']} | "
+        f"remaining_seats={new_seats}"
+    )
+
     return {
-        "message":
-        "Flight Booked Successfully"
+        "message": "Flight Booked Successfully"
     }
 
-@router.get("/bookings")
 
+@router.get("/bookings")
 def get_bookings():
 
     cursor.execute("SELECT * FROM bookings")
 
     bookings = cursor.fetchall()
 
+    logger.info(
+        f"Bookings fetched | count={len(bookings)}"
+    )
+
     return [dict(b) for b in bookings]
 
-@router.delete("/cancel/{booking_id}")
 
+@router.delete("/cancel/{booking_id}")
 def cancel_booking(booking_id: str):
 
-    cursor.execute("""
+    logger.info(
+        f"Flight cancellation request received | "
+        f"booking_id={booking_id}"
+    )
 
-    SELECT * FROM bookings
-    WHERE booking_id = ?
-
-    """, (booking_id,))
+    cursor.execute(
+        """
+        SELECT * FROM bookings
+        WHERE booking_id = ?
+        """,
+        (booking_id,)
+    )
 
     booking = cursor.fetchone()
 
     if not booking:
 
+        logger.warning(
+            f"Cancellation failed | "
+            f"reason=Booking Not Found | "
+            f"booking_id={booking_id}"
+        )
+
         return {
             "message": "Booking Not Found"
         }
 
-    cursor.execute("""
-
-    SELECT * FROM flights
-    WHERE id = ?
-
-    """, (booking["flight_id"],))
+    cursor.execute(
+        """
+        SELECT * FROM flights
+        WHERE id = ?
+        """,
+        (booking["flight_id"],)
+    )
 
     flight = cursor.fetchone()
 
@@ -156,27 +216,34 @@ def cancel_booking(booking_id: str):
         + booking["passengers"]
     )
 
-    cursor.execute("""
+    cursor.execute(
+        """
+        UPDATE flights
+        SET seats = ?
+        WHERE id = ?
+        """,
+        (
+            updated_seats,
+            booking["flight_id"]
+        )
+    )
 
-    UPDATE flights
-    SET seats = ?
-    WHERE id = ?
-
-    """, (
-        updated_seats,
-        booking["flight_id"]
-    ))
-
-    cursor.execute("""
-
-    DELETE FROM bookings
-    WHERE booking_id = ?
-
-    """, (booking_id,))
+    cursor.execute(
+        """
+        DELETE FROM bookings
+        WHERE booking_id = ?
+        """,
+        (booking_id,)
+    )
 
     conn.commit()
 
+    logger.info(
+        f"Flight booking cancelled | "
+        f"booking_id={booking_id} | "
+        f"restored_seats={booking['passengers']}"
+    )
+
     return {
-        "message":
-        "Booking Cancelled Successfully"
+        "message": "Booking Cancelled Successfully"
     }

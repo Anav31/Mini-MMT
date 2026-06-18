@@ -1,0 +1,365 @@
+2026-06-15 09:43:06,592 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-15 09:43:06,593 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-15 09:43:06,599 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,614 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,632 | INFO | Hotels fetched | count=8
+2026-06-15 09:43:06,635 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,651 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,678 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,705 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,717 | INFO | Hotels fetched | count=8
+2026-06-15 09:43:06,720 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,730 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-15 09:43:06,740 | INFO | Flight booked successfully | booking_id=BK8614 | pnr=MMT87945 | user=Test User | remaining_seats=37
+2026-06-15 09:43:06,745 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,774 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,803 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-15 09:43:06,818 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-15 09:43:06,830 | INFO | Hotel booked successfully | booking_id=HTBK5509 | pnr=HTL47570 | user=Test User | remaining_rooms=16
+2026-06-15 09:43:06,835 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:26:00,905 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:26:00,907 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:26:00,912 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,306 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,324 | INFO | Hotels fetched | count=8
+2026-06-17 08:26:01,330 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,347 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,369 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,388 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,400 | INFO | Hotels fetched | count=8
+2026-06-17 08:26:01,404 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,414 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:26:01,427 | INFO | Flight booked successfully | booking_id=BK7028 | pnr=MMT36092 | user=Test User | remaining_seats=36
+2026-06-17 08:26:01,431 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,459 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,489 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:26:01,502 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:26:01,512 | INFO | Hotel booked successfully | booking_id=HTBK2897 | pnr=HTL94924 | user=Test User | remaining_rooms=15
+2026-06-17 08:26:01,517 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,628 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:27:49,629 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:27:49,635 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,650 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:27:49,651 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:27:49,654 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,671 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:27:49,672 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=15 | requested=1000
+2026-06-17 08:27:49,677 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,702 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,725 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,743 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,759 | INFO | Hotels fetched | count=8
+2026-06-17 08:27:49,764 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,784 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,904 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,920 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,943 | INFO | Hotels fetched | count=8
+2026-06-17 08:27:49,947 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,957 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:27:49,966 | INFO | Flight booked successfully | booking_id=BK1132 | pnr=MMT35969 | user=Test User | remaining_seats=35
+2026-06-17 08:27:49,969 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:27:49,988 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:27:50,019 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:27:50,034 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:27:50,046 | INFO | Hotel booked successfully | booking_id=HTBK4715 | pnr=HTL44226 | user=Test User | remaining_rooms=14
+2026-06-17 08:27:50,050 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,497 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:38:45,500 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:38:45,508 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,532 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:38:45,533 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:38:45,540 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,626 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:38:45,627 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=14 | requested=1000
+2026-06-17 08:38:45,634 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,668 | INFO | Bus booking request received | user=Tester | bus_id=1 | passengers=100
+2026-06-17 08:38:45,670 | WARNING | Bus booking failed | reason=Not Enough Seats | available=12 | requested=100
+2026-06-17 08:38:45,676 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,721 | INFO | Train booking request received | user=Tester | train_id=1 | passengers=1000
+2026-06-17 08:38:45,722 | WARNING | Train booking failed | reason=Not Enough Seats | available=114 | requested=1000
+2026-06-17 08:38:45,731 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,763 | INFO | Flights fetched
+2026-06-17 08:38:45,773 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,807 | INFO | Hotels fetched | count=8
+2026-06-17 08:38:45,818 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:38:45,834 | INFO | Flights fetched
+2026-06-17 08:38:45,838 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:38:48,722 | INFO | Hotels fetched | count=8
+2026-06-17 08:38:48,724 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:38:48,733 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:38:48,746 | INFO | Flight booked successfully | booking_id=BK6226 | pnr=MMT26145 | user=Test User | remaining_seats=34
+2026-06-17 08:38:48,749 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:38:48,760 | INFO | Bus booking request received | user=Test User | bus_id=1 | passengers=1
+2026-06-17 08:38:48,770 | INFO | Bus booked successfully | booking_id=BUSBK9193 | pnr=BUS75963 | remaining_seats=11
+2026-06-17 08:38:48,773 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:38:48,783 | INFO | Train booking request received | user=Test User | train_id=1 | passengers=1
+2026-06-17 08:38:48,794 | INFO | Train booked successfully | booking_id=TRBK5861 | pnr=TRN95260 | remaining_seats=113
+2026-06-17 08:38:48,797 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:38:48,809 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:38:48,819 | INFO | Hotel booked successfully | booking_id=HTBK7884 | pnr=HTL97263 | user=Test User | remaining_rooms=13
+2026-06-17 08:38:48,823 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,115 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:38:56,116 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:38:56,121 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,133 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:38:56,134 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:38:56,137 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,156 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:38:56,157 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=13 | requested=1000
+2026-06-17 08:38:56,160 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,178 | INFO | Bus booking request received | user=Tester | bus_id=1 | passengers=100
+2026-06-17 08:38:56,178 | WARNING | Bus booking failed | reason=Not Enough Seats | available=11 | requested=100
+2026-06-17 08:38:56,182 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,201 | INFO | Train booking request received | user=Tester | train_id=1 | passengers=1000
+2026-06-17 08:38:56,202 | WARNING | Train booking failed | reason=Not Enough Seats | available=113 | requested=1000
+2026-06-17 08:38:56,205 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,219 | INFO | Flights fetched
+2026-06-17 08:38:56,223 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,233 | INFO | Hotels fetched | count=8
+2026-06-17 08:38:56,238 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:38:56,251 | INFO | Flights fetched
+2026-06-17 08:38:56,257 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:38:58,071 | INFO | Hotels fetched | count=8
+2026-06-17 08:38:58,073 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:38:58,084 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:38:58,095 | INFO | Flight booked successfully | booking_id=BK2468 | pnr=MMT32438 | user=Test User | remaining_seats=33
+2026-06-17 08:38:58,099 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:38:58,108 | INFO | Bus booking request received | user=Test User | bus_id=1 | passengers=1
+2026-06-17 08:38:58,118 | INFO | Bus booked successfully | booking_id=BUSBK1820 | pnr=BUS94090 | remaining_seats=10
+2026-06-17 08:38:58,122 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:38:58,132 | INFO | Train booking request received | user=Test User | train_id=1 | passengers=1
+2026-06-17 08:38:58,142 | INFO | Train booked successfully | booking_id=TRBK5150 | pnr=TRN51188 | remaining_seats=112
+2026-06-17 08:38:58,147 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:38:58,159 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:38:58,168 | INFO | Hotel booked successfully | booking_id=HTBK1266 | pnr=HTL84635 | user=Test User | remaining_rooms=12
+2026-06-17 08:38:58,172 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:41:29,750 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:41:29,751 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:41:29,755 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:41:29,767 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:41:29,768 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:41:29,772 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:41:29,791 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:41:29,791 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=12 | requested=1000
+2026-06-17 08:41:29,795 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:41:29,816 | INFO | Bus booking request received | user=Tester | bus_id=1 | passengers=100
+2026-06-17 08:41:29,817 | WARNING | Bus booking failed | reason=Not Enough Seats | available=10 | requested=100
+2026-06-17 08:41:29,820 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:41:29,837 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 404 Not Found"
+2026-06-17 08:41:30,109 | INFO | Flights fetched
+2026-06-17 08:41:30,113 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,124 | INFO | Hotels fetched | count=8
+2026-06-17 08:41:30,128 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,141 | INFO | Flights fetched
+2026-06-17 08:41:30,145 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,159 | INFO | Buses fetched | count=6
+2026-06-17 08:41:30,163 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,177 | INFO | Trains fetched | count=10
+2026-06-17 08:41:30,184 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,196 | INFO | Hotels fetched | count=8
+2026-06-17 08:41:30,201 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,211 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:41:30,223 | INFO | Flight booked successfully | booking_id=BK8524 | pnr=MMT40877 | user=Test User | remaining_seats=32
+2026-06-17 08:41:30,227 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,241 | INFO | Bus booking request received | user=Test User | bus_id=1 | passengers=1
+2026-06-17 08:41:30,251 | INFO | Bus booked successfully | booking_id=BUSBK1996 | pnr=BUS78242 | remaining_seats=9
+2026-06-17 08:41:30,256 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:41:30,268 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 404 Not Found"
+2026-06-17 08:41:30,291 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:41:30,301 | INFO | Hotel booked successfully | booking_id=HTBK8039 | pnr=HTL34802 | user=Test User | remaining_rooms=11
+2026-06-17 08:41:30,305 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,376 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:43:44,376 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:43:44,380 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,391 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:43:44,391 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:43:44,395 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,414 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:43:44,415 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=11 | requested=1000
+2026-06-17 08:43:44,418 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,436 | INFO | Bus booking request received | user=Tester | bus_id=1 | passengers=100
+2026-06-17 08:43:44,436 | WARNING | Bus booking failed | reason=Not Enough Seats | available=9 | requested=100
+2026-06-17 08:43:44,439 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,459 | INFO | Train booking request received | user=Tester | train_id=1 | passengers=1000
+2026-06-17 08:43:44,460 | WARNING | Train booking failed | reason=Not Enough Seats | available=112 | requested=1000
+2026-06-17 08:43:44,464 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,477 | INFO | Flights fetched
+2026-06-17 08:43:44,482 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,492 | INFO | Hotels fetched | count=8
+2026-06-17 08:43:44,496 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,507 | INFO | Flights fetched
+2026-06-17 08:43:44,512 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,526 | INFO | Buses fetched | count=6
+2026-06-17 08:43:44,531 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,546 | INFO | Trains fetched | count=10
+2026-06-17 08:43:44,550 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,562 | INFO | Hotels fetched | count=8
+2026-06-17 08:43:44,566 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,576 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:43:44,589 | INFO | Flight booked successfully | booking_id=BK7952 | pnr=MMT31985 | user=Test User | remaining_seats=31
+2026-06-17 08:43:44,592 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,604 | INFO | Bus booking request received | user=Test User | bus_id=1 | passengers=1
+2026-06-17 08:43:44,615 | INFO | Bus booked successfully | booking_id=BUSBK1124 | pnr=BUS29252 | remaining_seats=8
+2026-06-17 08:43:44,618 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,631 | INFO | Train booking request received | user=Test User | train_id=1 | passengers=1
+2026-06-17 08:43:44,641 | INFO | Train booked successfully | booking_id=TRBK3393 | pnr=TRN22249 | remaining_seats=111
+2026-06-17 08:43:44,646 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:43:44,658 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:43:44,669 | INFO | Hotel booked successfully | booking_id=HTBK7082 | pnr=HTL97234 | user=Test User | remaining_rooms=10
+2026-06-17 08:43:44,673 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,037 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:52:30,038 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:52:30,042 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,055 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:52:30,056 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:52:30,060 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,079 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:52:30,080 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=10 | requested=1000
+2026-06-17 08:52:30,082 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,105 | INFO | Bus booking request received | user=Tester | bus_id=1 | passengers=100
+2026-06-17 08:52:30,105 | WARNING | Bus booking failed | reason=Not Enough Seats | available=8 | requested=100
+2026-06-17 08:52:30,110 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,130 | INFO | Train booking request received | user=Tester | train_id=1 | passengers=1000
+2026-06-17 08:52:30,131 | WARNING | Train booking failed | reason=Not Enough Seats | available=111 | requested=1000
+2026-06-17 08:52:30,133 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,145 | INFO | Flights fetched
+2026-06-17 08:52:30,149 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,164 | INFO | Hotels fetched | count=8
+2026-06-17 08:52:30,168 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,180 | INFO | Flights fetched
+2026-06-17 08:52:30,186 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,196 | INFO | Buses fetched | count=6
+2026-06-17 08:52:30,200 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,210 | INFO | Trains fetched | count=10
+2026-06-17 08:52:30,213 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,222 | INFO | Hotels fetched | count=8
+2026-06-17 08:52:30,225 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,235 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:52:30,245 | INFO | Flight booked successfully | booking_id=BK4903 | pnr=MMT89117 | user=Test User | remaining_seats=30
+2026-06-17 08:52:30,248 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,257 | INFO | Bus booking request received | user=Test User | bus_id=1 | passengers=1
+2026-06-17 08:52:30,265 | INFO | Bus booked successfully | booking_id=BUSBK5186 | pnr=BUS37049 | remaining_seats=7
+2026-06-17 08:52:30,268 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,276 | INFO | Train booking request received | user=Test User | train_id=1 | passengers=1
+2026-06-17 08:52:30,284 | INFO | Train booked successfully | booking_id=TRBK3100 | pnr=TRN98710 | remaining_seats=110
+2026-06-17 08:52:30,287 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:52:30,296 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:52:30,304 | INFO | Hotel booked successfully | booking_id=HTBK4947 | pnr=HTL60824 | user=Test User | remaining_rooms=9
+2026-06-17 08:52:30,307 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,816 | INFO | Flight booking request received | user=Test | flight_id=9999 | passengers=1
+2026-06-17 08:54:51,817 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:54:51,824 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,834 | INFO | Flight booking request received | user=Bug Tester | flight_id=1 | passengers=-5
+2026-06-17 08:54:51,835 | WARNING | Flight booking failed | reason=Invalid Passenger Count | requested=-5
+2026-06-17 08:54:51,838 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,860 | INFO | Bus booking request received | user=Bug Tester | bus_id=1 | passengers=-2
+2026-06-17 08:54:51,862 | WARNING | Bus booking failed | reason=Invalid Passenger Count | requested=-2
+2026-06-17 08:54:51,865 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,883 | INFO | Train booking request received | user=Bug Tester | train_id=1 | passengers=-10
+2026-06-17 08:54:51,883 | WARNING | Train booking failed | reason=Invalid Passenger Count | requested=-10
+2026-06-17 08:54:51,886 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,900 | INFO | Hotel booking request received | user=Bug Tester | hotel_id=1 | rooms_requested=-1
+2026-06-17 08:54:51,900 | WARNING | Hotel booking failed | reason=Invalid Room Count | requested=-1
+2026-06-17 08:54:51,905 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,917 | INFO | Flight booking request received | user=Tester | flight_id=9999 | passengers=1
+2026-06-17 08:54:51,917 | WARNING | Flight booking failed | reason=Flight Not Found | flight_id=9999
+2026-06-17 08:54:51,922 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,934 | INFO | Hotel booking request received | user=Tester | hotel_id=1 | rooms_requested=1000
+2026-06-17 08:54:51,935 | WARNING | Hotel booking failed | reason=Not Enough Rooms | available=9 | requested=1000
+2026-06-17 08:54:51,939 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,951 | INFO | Bus booking request received | user=Tester | bus_id=1 | passengers=100
+2026-06-17 08:54:51,952 | WARNING | Bus booking failed | reason=Not Enough Seats | available=7 | requested=100
+2026-06-17 08:54:51,957 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,969 | INFO | Train booking request received | user=Tester | train_id=1 | passengers=1000
+2026-06-17 08:54:51,969 | WARNING | Train booking failed | reason=Not Enough Seats | available=110 | requested=1000
+2026-06-17 08:54:51,974 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:54:51,988 | INFO | Flights fetched
+2026-06-17 08:54:51,993 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,006 | INFO | Hotels fetched | count=8
+2026-06-17 08:54:52,011 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,020 | INFO | Flights fetched
+2026-06-17 08:54:52,024 | INFO | HTTP Request: GET http://testserver/flights "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,037 | INFO | Buses fetched | count=6
+2026-06-17 08:54:52,043 | INFO | HTTP Request: GET http://testserver/buses "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,055 | INFO | Trains fetched | count=10
+2026-06-17 08:54:52,061 | INFO | HTTP Request: GET http://testserver/trains "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,070 | INFO | Hotels fetched | count=8
+2026-06-17 08:54:52,073 | INFO | HTTP Request: GET http://testserver/hotels "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,085 | INFO | Flight booking request received | user=Test User | flight_id=1 | passengers=1
+2026-06-17 08:54:52,097 | INFO | Flight booked successfully | booking_id=BK4833 | pnr=MMT99567 | user=Test User | remaining_seats=29
+2026-06-17 08:54:52,101 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,115 | INFO | Bus booking request received | user=Test User | bus_id=1 | passengers=1
+2026-06-17 08:54:52,125 | INFO | Bus booked successfully | booking_id=BUSBK7103 | pnr=BUS94086 | remaining_seats=6
+2026-06-17 08:54:52,129 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,142 | INFO | Train booking request received | user=Test User | train_id=1 | passengers=1
+2026-06-17 08:54:52,151 | INFO | Train booked successfully | booking_id=TRBK9994 | pnr=TRN88428 | remaining_seats=109
+2026-06-17 08:54:52,156 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-17 08:54:52,167 | INFO | Hotel booking request received | user=Test User | hotel_id=1 | rooms_requested=1
+2026-06-17 08:54:52,177 | INFO | Hotel booked successfully | booking_id=HTBK3798 | pnr=HTL92797 | user=Test User | remaining_rooms=8
+2026-06-17 08:54:52,181 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 09:00:24,321 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=-5
+2026-06-17 09:00:24,321 | WARNING | Flight booking failed | reason=Invalid Passenger Count | requested=-5
+2026-06-17 09:00:24,325 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 09:00:24,329 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=1
+2026-06-17 09:00:24,339 | INFO | Flight booked successfully | booking_id=BK6889 | pnr=MMT34454 | user=Agent User | remaining_seats=28
+2026-06-17 09:00:24,342 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 09:05:31,131 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=-5
+2026-06-17 09:05:31,131 | WARNING | Flight booking failed | reason=Invalid Passenger Count | requested=-5
+2026-06-17 09:05:31,134 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 09:05:31,138 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=1
+2026-06-17 09:05:31,149 | INFO | Flight booked successfully | booking_id=BK9494 | pnr=MMT50740 | user=Agent User | remaining_seats=27
+2026-06-17 09:05:31,152 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-17 09:05:31,160 | INFO | Hotel booking request received | user=Agent User | hotel_id=1 | rooms_requested=-2
+2026-06-17 09:05:31,160 | WARNING | Hotel booking failed | reason=Invalid Room Count | requested=-2
+2026-06-17 09:05:31,163 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-17 09:05:31,171 | INFO | Bus booking request received | user=Agent User | bus_id=1 | passengers=-3
+2026-06-17 09:05:31,171 | WARNING | Bus booking failed | reason=Invalid Passenger Count | requested=-3
+2026-06-17 09:05:31,174 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-17 09:05:31,184 | INFO | Train booking request received | user=Agent User | train_id=1 | passengers=-10
+2026-06-17 09:05:31,184 | WARNING | Train booking failed | reason=Invalid Passenger Count | requested=-10
+2026-06-17 09:05:31,187 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-18 09:00:08,429 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=-5
+2026-06-18 09:00:08,430 | WARNING | Flight booking failed | reason=Invalid Passenger Count | requested=-5
+2026-06-18 09:00:08,434 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-18 09:00:08,440 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=1
+2026-06-18 09:00:08,454 | INFO | Flight booked successfully | booking_id=BK9199 | pnr=MMT33819 | user=Agent User | remaining_seats=26
+2026-06-18 09:00:08,457 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-18 09:00:08,470 | INFO | Hotel booking request received | user=Agent User | hotel_id=1 | rooms_requested=-2
+2026-06-18 09:00:08,470 | WARNING | Hotel booking failed | reason=Invalid Room Count | requested=-2
+2026-06-18 09:00:08,474 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-18 09:00:08,484 | INFO | Bus booking request received | user=Agent User | bus_id=1 | passengers=-3
+2026-06-18 09:00:08,484 | WARNING | Bus booking failed | reason=Invalid Passenger Count | requested=-3
+2026-06-18 09:00:08,487 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-18 09:00:08,498 | INFO | Train booking request received | user=Agent User | train_id=1 | passengers=-10
+2026-06-18 09:00:08,499 | WARNING | Train booking failed | reason=Invalid Passenger Count | requested=-10
+2026-06-18 09:00:08,501 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-18 09:03:18,584 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=-5
+2026-06-18 09:03:18,596 | INFO | Flight booked successfully | booking_id=BK6972 | pnr=MMT70863 | user=Agent User | remaining_seats=31
+2026-06-18 09:03:18,601 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-18 09:03:18,608 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=1
+2026-06-18 09:03:18,616 | INFO | Flight booked successfully | booking_id=BK8844 | pnr=MMT42608 | user=Agent User | remaining_seats=30
+2026-06-18 09:03:18,620 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-18 09:03:18,630 | INFO | Hotel booking request received | user=Agent User | hotel_id=1 | rooms_requested=-2
+2026-06-18 09:03:18,630 | WARNING | Hotel booking failed | reason=Invalid Room Count | requested=-2
+2026-06-18 09:03:18,633 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-18 09:03:18,644 | INFO | Bus booking request received | user=Agent User | bus_id=1 | passengers=-3
+2026-06-18 09:03:18,651 | INFO | Bus booked successfully | booking_id=BUSBK3305 | pnr=BUS81878 | remaining_seats=9
+2026-06-18 09:03:18,655 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-18 09:03:18,664 | INFO | Train booking request received | user=Agent User | train_id=1 | passengers=-10
+2026-06-18 09:03:18,672 | INFO | Train booked successfully | booking_id=TRBK4417 | pnr=TRN74300 | remaining_seats=119
+2026-06-18 09:03:18,675 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
+2026-06-18 09:17:51,238 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=-5
+2026-06-18 09:17:51,251 | INFO | Flight booked successfully | booking_id=BK8232 | pnr=MMT80061 | user=Agent User | remaining_seats=35
+2026-06-18 09:17:51,255 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-18 09:17:51,260 | INFO | Flight booking request received | user=Agent User | flight_id=1 | passengers=1
+2026-06-18 09:17:51,270 | INFO | Flight booked successfully | booking_id=BK8497 | pnr=MMT73377 | user=Agent User | remaining_seats=34
+2026-06-18 09:17:51,274 | INFO | HTTP Request: POST http://testserver/book "HTTP/1.1 200 OK"
+2026-06-18 09:17:51,285 | INFO | Hotel booking request received | user=Agent User | hotel_id=1 | rooms_requested=-2
+2026-06-18 09:17:51,285 | WARNING | Hotel booking failed | reason=Invalid Room Count | requested=-2
+2026-06-18 09:17:51,288 | INFO | HTTP Request: POST http://testserver/book-hotel "HTTP/1.1 200 OK"
+2026-06-18 09:17:51,299 | INFO | Bus booking request received | user=Agent User | bus_id=1 | passengers=-3
+2026-06-18 09:17:51,313 | INFO | Bus booked successfully | booking_id=BUSBK8505 | pnr=BUS66625 | remaining_seats=12
+2026-06-18 09:17:51,316 | INFO | HTTP Request: POST http://testserver/book-bus "HTTP/1.1 200 OK"
+2026-06-18 09:17:51,327 | INFO | Train booking request received | user=Agent User | train_id=1 | passengers=-10
+2026-06-18 09:17:51,337 | INFO | Train booked successfully | booking_id=TRBK7550 | pnr=TRN61616 | remaining_seats=129
+2026-06-18 09:17:51,342 | INFO | HTTP Request: POST http://testserver/book-train "HTTP/1.1 200 OK"
