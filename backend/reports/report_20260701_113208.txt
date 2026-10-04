@@ -1,0 +1,9 @@
+module: train
+scenario: normal_flow
+expected: Results Found
+actual: Results Found
+bug_found: False
+execution_time: 0.16
+confidence: 100
+timestamp: 2026-07-01 11:32:08
+screenshot: screenshots/train_normal_flow_20260701_113208.png

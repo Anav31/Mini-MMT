@@ -1,0 +1,12 @@
+module: train
+scenario: booking_zero_passengers
+expected: Passenger count must be greater than 0
+actual: Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Trains") to be visible
+
+bug_found: True
+execution_time: 0.09
+confidence: 95
+timestamp: 2026-06-30 19:01:36
+screenshot: screenshots/train_booking_zero_passengers_20260630_190136.png

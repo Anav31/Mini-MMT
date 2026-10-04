@@ -1,0 +1,648 @@
+2026-06-30 18:55:14 | flight | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-06-30 18:55:19 | flight | booking_flow | Booking Success | Bug=False | Confidence=100%
+2026-06-30 18:55:23 | flight | cancel_booking | Booking Cancelled | Bug=False | Confidence=100%
+2026-06-30 18:55:30 | flight | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:55:37 | flight | special_characters | No Flights Found | Bug=True | Confidence=95%
+2026-06-30 18:55:44 | flight | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:55:51 | flight | special_characters | No Flights Found | Bug=True | Confidence=95%
+2026-06-30 18:55:59 | flight | negative_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:56:06 | flight | zero_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:56:11 | flight | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-06-30 18:56:41 | flight | booking_negative_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Flights") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 18:57:11 | flight | booking_zero_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Flights") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 18:57:13 | flight | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-06-30 18:57:20 | flight | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:57:27 | bus | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-06-30 18:57:32 | bus | booking_flow | Booking Success | Bug=False | Confidence=100%
+2026-06-30 18:57:36 | bus | cancel_booking | Booking Cancelled | Bug=False | Confidence=100%
+2026-06-30 18:57:43 | bus | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:57:50 | bus | special_characters | No Buses Found | Bug=True | Confidence=95%
+2026-06-30 18:57:57 | bus | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:58:04 | bus | special_characters | No Buses Found | Bug=True | Confidence=95%
+2026-06-30 18:58:11 | bus | negative_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:58:18 | bus | zero_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:58:23 | bus | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-06-30 18:58:53 | bus | booking_negative_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Buses") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 18:59:23 | bus | booking_zero_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Buses") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 18:59:26 | bus | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-06-30 18:59:32 | bus | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-06-30 18:59:39 | train | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-06-30 18:59:44 | train | booking_flow | Booking Success | Bug=False | Confidence=100%
+2026-06-30 18:59:48 | train | cancel_booking | Booking Cancelled | Bug=False | Confidence=100%
+2026-06-30 18:59:55 | train | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:00:02 | train | special_characters | No Trains Found | Bug=True | Confidence=95%
+2026-06-30 19:00:09 | train | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:00:16 | train | special_characters | No Trains Found | Bug=True | Confidence=95%
+2026-06-30 19:00:24 | train | negative_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:00:30 | train | zero_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:00:36 | train | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-06-30 19:01:06 | train | booking_negative_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Trains") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 19:01:36 | train | booking_zero_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Trains") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 19:01:38 | train | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-06-30 19:01:45 | train | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:01:50 | hotel | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-06-30 19:01:55 | hotel | booking_flow | Booking Success | Bug=False | Confidence=100%
+2026-06-30 19:01:59 | hotel | cancel_booking | Booking Cancelled | Bug=False | Confidence=100%
+2026-06-30 19:02:06 | hotel | empty_text | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:02:12 | hotel | special_characters | No Hotels Found | Bug=True | Confidence=95%
+2026-06-30 19:02:18 | hotel | negative_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:02:24 | hotel | zero_value | Results Found | Bug=True | Confidence=95%
+2026-06-30 19:02:28 | hotel | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-06-30 19:02:58 | hotel | booking_negative_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Hotels") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 19:03:29 | hotel | booking_zero_passengers | Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Search Hotels") to be visible
+ | Bug=True | Confidence=95%
+2026-06-30 19:03:31 | hotel | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-06-30 19:03:36 | hotel | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:28:13 | flight | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-07-01 11:28:25 | flight | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:28:29 | flight | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:28:39 | flight | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:28:49 | flight | special_characters | No Flights Found | Bug=True | Confidence=95%
+2026-07-01 11:28:58 | flight | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:29:08 | flight | special_characters | No Flights Found | Bug=True | Confidence=95%
+2026-07-01 11:29:18 | flight | negative_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:29:28 | flight | zero_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:29:40 | flight | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:29:44 | flight | booking_negative_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Flights
+Search Flights
+IndiGo
+✈ Delhi → Mumbai
+08:00
+─────
+10:00
+Duration: 2h
+Seats Left: 40
+₹5000
+Book Now
+Air India
+✈ Delhi → Mumbai
+12:00
+─────
+14:00
+Duration: 2h
+Seats Left: 35
+₹6200
+Book Now
+SpiceJet
+✈ Delhi → Mumbai
+18:00
+─────
+20:15
+Duration: 2h 15m
+Seats Left: 20
+₹4800
+Book Now
+Vistara
+✈ Delhi → Goa
+09:00
+─────
+11:30
+Duration: 2h 30m
+Seats Left: 25
+₹7200
+Book Now
+Akasa Air
+✈ Mumbai → Bangalore
+07:00
+─────
+09:00
+Duration: 2h
+Seats Left: 30
+₹5400
+Book Now
+AirAsia
+✈ Bangalore → Goa
+13:00
+─────
+14:30
+Duration: 1h 30m
+Seats Left: 28
+₹4500
+Book Now
+6 Flights Found | Bug=True | Confidence=95%
+2026-07-01 11:29:48 | flight | booking_zero_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Flights
+Search Flights
+IndiGo
+✈ Delhi → Mumbai
+08:00
+─────
+10:00
+Duration: 2h
+Seats Left: 40
+₹5000
+Book Now
+Air India
+✈ Delhi → Mumbai
+12:00
+─────
+14:00
+Duration: 2h
+Seats Left: 35
+₹6200
+Book Now
+SpiceJet
+✈ Delhi → Mumbai
+18:00
+─────
+20:15
+Duration: 2h 15m
+Seats Left: 20
+₹4800
+Book Now
+Vistara
+✈ Delhi → Goa
+09:00
+─────
+11:30
+Duration: 2h 30m
+Seats Left: 25
+₹7200
+Book Now
+Akasa Air
+✈ Mumbai → Bangalore
+07:00
+─────
+09:00
+Duration: 2h
+Seats Left: 30
+₹5400
+Book Now
+AirAsia
+✈ Bangalore → Goa
+13:00
+─────
+14:30
+Duration: 1h 30m
+Seats Left: 28
+₹4500
+Book Now
+6 Flights Found | Bug=True | Confidence=95%
+2026-07-01 11:29:51 | flight | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:30:01 | flight | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:30:11 | bus | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-07-01 11:30:23 | bus | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:30:26 | bus | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:30:36 | bus | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:30:46 | bus | special_characters | No Buses Found | Bug=True | Confidence=95%
+2026-07-01 11:30:56 | bus | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:31:06 | bus | special_characters | No Buses Found | Bug=True | Confidence=95%
+2026-07-01 11:31:16 | bus | negative_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:31:26 | bus | zero_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:31:38 | bus | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:31:42 | bus | booking_negative_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Buses 🚌
+Search Buses
+RedBus Express
+Delhi → Manali
+08:00 PM → 06:00 AM
+Duration: 10h
+Seats Left: 18
+₹1200
+Book Bus
+Volvo Travels
+Delhi → Jaipur
+07:00 AM → 01:00 PM
+Duration: 6h
+Seats Left: 22
+₹850
+Book Bus
+Orange Tours
+Mumbai → Pune
+09:00 AM → 01:00 PM
+Duration: 4h
+Seats Left: 15
+₹700
+Book Bus
+MiniBus Express
+Delhi → Mumbai
+08:00 PM → 10:00 AM
+Duration: 14h
+Seats Left: 18
+₹2500
+Book Bus
+Lak Travels
+Delhi → Lucknow
+07:00 AM → 07:00 PM
+Duration: 12h
+Seats Left: 22
+₹1250
+Book Bus
+Orange Tours
+Mumbai → Delhi
+09:00 AM → 12:00 Noon
+Duration: 14h
+Seats Left: 15
+₹3000
+Book Bus
+6 Buses Found | Bug=True | Confidence=95%
+2026-07-01 11:31:46 | bus | booking_zero_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Buses 🚌
+Search Buses
+RedBus Express
+Delhi → Manali
+08:00 PM → 06:00 AM
+Duration: 10h
+Seats Left: 18
+₹1200
+Book Bus
+Volvo Travels
+Delhi → Jaipur
+07:00 AM → 01:00 PM
+Duration: 6h
+Seats Left: 22
+₹850
+Book Bus
+Orange Tours
+Mumbai → Pune
+09:00 AM → 01:00 PM
+Duration: 4h
+Seats Left: 15
+₹700
+Book Bus
+MiniBus Express
+Delhi → Mumbai
+08:00 PM → 10:00 AM
+Duration: 14h
+Seats Left: 18
+₹2500
+Book Bus
+Lak Travels
+Delhi → Lucknow
+07:00 AM → 07:00 PM
+Duration: 12h
+Seats Left: 22
+₹1250
+Book Bus
+Orange Tours
+Mumbai → Delhi
+09:00 AM → 12:00 Noon
+Duration: 14h
+Seats Left: 15
+₹3000
+Book Bus
+6 Buses Found | Bug=True | Confidence=95%
+2026-07-01 11:31:49 | bus | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:31:59 | bus | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:32:08 | train | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-07-01 11:32:21 | train | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:32:25 | train | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:32:34 | train | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:32:45 | train | special_characters | No Trains Found | Bug=True | Confidence=95%
+2026-07-01 11:32:55 | train | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:33:05 | train | special_characters | No Trains Found | Bug=True | Confidence=95%
+2026-07-01 11:33:14 | train | negative_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:33:24 | train | zero_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:33:36 | train | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:33:40 | train | booking_negative_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Trains 🚂
+Search Trains
+Rajdhani Express
+Delhi → Mumbai
+04:00 PM → 08:00 AM
+Duration: 16h
+Seats Left: 120
+₹2200
+Book Train
+Shatabdi Express
+Delhi → Chandigarh
+06:00 AM → 09:30 AM
+Duration: 3h 30m
+Seats Left: 80
+₹950
+Book Train
+Duronto Express
+Mumbai → Pune
+08:00 AM → 11:00 AM
+Duration: 3h
+Seats Left: 90
+₹750
+Book Train
+Garib Rath
+Delhi → Jaipur
+10:00 PM → 04:00 AM
+Duration: 6h
+Seats Left: 100
+₹650
+Book Train
+Vande Bharat
+Delhi → Varanasi
+06:00 AM → 02:00 PM
+Duration: 8h
+Seats Left: 70
+₹1800
+Book Train
+Tejas Express
+Mumbai → Goa
+07:00 AM → 03:00 PM
+Duration: 8h
+Seats Left: 60
+₹1900
+Book Train
+Humsafar Express
+Ahmedabad → Bangalore
+05:00 PM → 11:00 AM
+Duration: 18h
+Seats Left: 110
+₹2400
+Book Train
+Jan Shatabdi
+Chennai → Bangalore
+07:00 AM → 01:00 PM
+Duration: 6h
+Seats Left: 95
+₹850
+Book Train
+Intercity Express
+Lucknow → Kanpur
+09:00 AM → 11:30 AM
+Duration: 2h 30m
+Seats Left: 85
+₹400
+Book Train
+Superfast Express
+Hyderabad → Chennai
+08:00 PM → 07:00 AM
+Duration: 11h
+Seats Left: 130
+₹1500
+Book Train
+10 Trains Found | Bug=True | Confidence=95%
+2026-07-01 11:33:44 | train | booking_zero_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Trains 🚂
+Search Trains
+Rajdhani Express
+Delhi → Mumbai
+04:00 PM → 08:00 AM
+Duration: 16h
+Seats Left: 120
+₹2200
+Book Train
+Shatabdi Express
+Delhi → Chandigarh
+06:00 AM → 09:30 AM
+Duration: 3h 30m
+Seats Left: 80
+₹950
+Book Train
+Duronto Express
+Mumbai → Pune
+08:00 AM → 11:00 AM
+Duration: 3h
+Seats Left: 90
+₹750
+Book Train
+Garib Rath
+Delhi → Jaipur
+10:00 PM → 04:00 AM
+Duration: 6h
+Seats Left: 100
+₹650
+Book Train
+Vande Bharat
+Delhi → Varanasi
+06:00 AM → 02:00 PM
+Duration: 8h
+Seats Left: 70
+₹1800
+Book Train
+Tejas Express
+Mumbai → Goa
+07:00 AM → 03:00 PM
+Duration: 8h
+Seats Left: 60
+₹1900
+Book Train
+Humsafar Express
+Ahmedabad → Bangalore
+05:00 PM → 11:00 AM
+Duration: 18h
+Seats Left: 110
+₹2400
+Book Train
+Jan Shatabdi
+Chennai → Bangalore
+07:00 AM → 01:00 PM
+Duration: 6h
+Seats Left: 95
+₹850
+Book Train
+Intercity Express
+Lucknow → Kanpur
+09:00 AM → 11:30 AM
+Duration: 2h 30m
+Seats Left: 85
+₹400
+Book Train
+Superfast Express
+Hyderabad → Chennai
+08:00 PM → 07:00 AM
+Duration: 11h
+Seats Left: 130
+₹1500
+Book Train
+10 Trains Found | Bug=True | Confidence=95%
+2026-07-01 11:33:48 | train | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:33:57 | train | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:34:05 | hotel | normal_flow | Results Found | Bug=False | Confidence=100%
+2026-07-01 11:34:18 | hotel | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:34:21 | hotel | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:34:30 | hotel | empty_text | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:34:38 | hotel | special_characters | No Hotels Found | Bug=True | Confidence=95%
+2026-07-01 11:34:47 | hotel | negative_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:34:55 | hotel | zero_value | Results Found | Bug=True | Confidence=95%
+2026-07-01 11:35:07 | hotel | booking_flow | Booking Failed | Bug=True | Confidence=95%
+2026-07-01 11:35:11 | hotel | booking_negative_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Hotels 🏨
+Search Hotels
+Taj Palace
+📍 Delhi
+Room Type: Deluxe
+Rating: ⭐ 4.8
+Rooms Left: 20
+₹8500
+Book Hotel
+Oberoi Grand
+📍 Mumbai
+Room Type: Suite
+Rating: ⭐ 4.7
+Rooms Left: 15
+₹12000
+Book Hotel
+ITC Royal
+📍 Bangalore
+Room Type: Standard
+Rating: ⭐ 4.5
+Rooms Left: 25
+₹6000
+Book Hotel
+Leela Palace
+📍 Chennai
+Room Type: Deluxe
+Rating: ⭐ 4.6
+Rooms Left: 18
+₹7500
+Book Hotel
+Radisson Blu
+📍 Hyderabad
+Room Type: Suite
+Rating: ⭐ 4.4
+Rooms Left: 12
+₹9500
+Book Hotel
+Holiday Inn
+📍 Goa
+Room Type: Standard
+Rating: ⭐ 4.3
+Rooms Left: 30
+₹5500
+Book Hotel
+Marriott
+📍 Pune
+Room Type: Deluxe
+Rating: ⭐ 4.7
+Rooms Left: 22
+₹8200
+Book Hotel
+Vivanta
+📍 Jaipur
+Room Type: Suite
+Rating: ⭐ 4.5
+Rooms Left: 14
+₹9800
+Book Hotel
+8 Hotels Found | Bug=True | Confidence=95%
+2026-07-01 11:35:15 | hotel | booking_zero_passengers | Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Hotels 🏨
+Search Hotels
+Taj Palace
+📍 Delhi
+Room Type: Deluxe
+Rating: ⭐ 4.8
+Rooms Left: 20
+₹8500
+Book Hotel
+Oberoi Grand
+📍 Mumbai
+Room Type: Suite
+Rating: ⭐ 4.7
+Rooms Left: 15
+₹12000
+Book Hotel
+ITC Royal
+📍 Bangalore
+Room Type: Standard
+Rating: ⭐ 4.5
+Rooms Left: 25
+₹6000
+Book Hotel
+Leela Palace
+📍 Chennai
+Room Type: Deluxe
+Rating: ⭐ 4.6
+Rooms Left: 18
+₹7500
+Book Hotel
+Radisson Blu
+📍 Hyderabad
+Room Type: Suite
+Rating: ⭐ 4.4
+Rooms Left: 12
+₹9500
+Book Hotel
+Holiday Inn
+📍 Goa
+Room Type: Standard
+Rating: ⭐ 4.3
+Rooms Left: 30
+₹5500
+Book Hotel
+Marriott
+📍 Pune
+Room Type: Deluxe
+Rating: ⭐ 4.7
+Rooms Left: 22
+₹8200
+Book Hotel
+Vivanta
+📍 Jaipur
+Room Type: Suite
+Rating: ⭐ 4.5
+Rooms Left: 14
+₹9800
+Book Hotel
+8 Hotels Found | Bug=True | Confidence=95%
+2026-07-01 11:35:18 | hotel | cancel_booking | Booking Not Found | Bug=True | Confidence=95%
+2026-07-01 11:35:27 | hotel | cancel_invalid_booking | Results Found | Bug=True | Confidence=95%

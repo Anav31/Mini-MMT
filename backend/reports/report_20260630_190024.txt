@@ -1,0 +1,9 @@
+module: train
+scenario: negative_value
+expected: Passenger count must be greater than 0
+actual: Results Found
+bug_found: True
+execution_time: 0.12
+confidence: 95
+timestamp: 2026-06-30 19:00:24
+screenshot: screenshots/train_negative_value_20260630_190023.png

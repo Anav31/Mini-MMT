@@ -1,0 +1,9 @@
+module: bus
+scenario: normal_flow
+expected: Results Found
+actual: Results Found
+bug_found: False
+execution_time: 0.23
+confidence: 100
+timestamp: 2026-07-01 11:30:11
+screenshot: screenshots/bus_normal_flow_20260701_113010.png

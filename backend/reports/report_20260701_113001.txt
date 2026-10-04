@@ -1,0 +1,9 @@
+module: flight
+scenario: cancel_invalid_booking
+expected: Unknown
+actual: Results Found
+bug_found: True
+execution_time: 0.23
+confidence: 95
+timestamp: 2026-07-01 11:30:01
+screenshot: screenshots/flight_cancel_invalid_booking_20260701_113001.png

@@ -1,0 +1,9 @@
+module: hotel
+scenario: special_characters
+expected: No Results
+actual: No Hotels Found
+bug_found: True
+execution_time: 0.1
+confidence: 95
+timestamp: 2026-07-01 11:34:38
+screenshot: screenshots/hotel_special_characters_20260701_113438.png

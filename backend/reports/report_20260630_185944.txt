@@ -1,0 +1,9 @@
+module: train
+scenario: booking_flow
+expected: Booking Success
+actual: Booking Success
+bug_found: False
+execution_time: 0.12
+confidence: 100
+timestamp: 2026-06-30 18:59:44
+screenshot: screenshots/train_booking_flow_20260630_185944.png

@@ -1,0 +1,9 @@
+module: bus
+scenario: empty_text
+expected: Field Required
+actual: Results Found
+bug_found: True
+execution_time: 0.14
+confidence: 95
+timestamp: 2026-06-30 18:57:57
+screenshot: screenshots/bus_empty_text_20260630_185757.png

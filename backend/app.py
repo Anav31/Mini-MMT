@@ -7,6 +7,7 @@ from routes.flights import router as flights_router
 from routes.trains import router as trains_router
 from routes.bookings import router as bookings_router
 from routes.buses import router as buses_router
+from routes.dashboard import router as dashboard_router
 
 app = FastAPI()
 
@@ -21,6 +22,8 @@ app.include_router(flights_router)
 app.include_router(bookings_router)
 
 app.include_router(hotels_router)
+
+app.include_router(dashboard_router)
 
 app.include_router(buses_router)
 

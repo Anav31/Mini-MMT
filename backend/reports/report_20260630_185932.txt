@@ -1,0 +1,9 @@
+module: bus
+scenario: cancel_invalid_booking
+expected: Unknown
+actual: Results Found
+bug_found: True
+execution_time: 0.12
+confidence: 95
+timestamp: 2026-06-30 18:59:32
+screenshot: screenshots/bus_cancel_invalid_booking_20260630_185932.png

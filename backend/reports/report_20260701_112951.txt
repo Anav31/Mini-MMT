@@ -1,0 +1,9 @@
+module: flight
+scenario: cancel_booking
+expected: Booking Cancelled
+actual: Booking Not Found
+bug_found: True
+execution_time: 0.12
+confidence: 95
+timestamp: 2026-07-01 11:29:51
+screenshot: screenshots/flight_cancel_booking_20260701_112951.png

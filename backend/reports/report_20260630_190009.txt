@@ -1,0 +1,9 @@
+module: train
+scenario: empty_text
+expected: Field Required
+actual: Results Found
+bug_found: True
+execution_time: 0.24
+confidence: 95
+timestamp: 2026-06-30 19:00:09
+screenshot: screenshots/train_empty_text_20260630_190009.png

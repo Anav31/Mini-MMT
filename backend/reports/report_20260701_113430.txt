@@ -1,0 +1,9 @@
+module: hotel
+scenario: empty_text
+expected: Field Required
+actual: Results Found
+bug_found: True
+execution_time: 0.21
+confidence: 95
+timestamp: 2026-07-01 11:34:30
+screenshot: screenshots/hotel_empty_text_20260701_113429.png

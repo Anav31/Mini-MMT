@@ -1,0 +1,9 @@
+module: train
+scenario: special_characters
+expected: No Results
+actual: No Trains Found
+bug_found: True
+execution_time: 0.14
+confidence: 95
+timestamp: 2026-07-01 11:33:05
+screenshot: screenshots/train_special_characters_20260701_113304.png

@@ -1,0 +1,60 @@
+module: bus
+scenario: booking_negative_passengers
+expected: Passenger count must be greater than 0
+actual: Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Buses 🚌
+Search Buses
+RedBus Express
+Delhi → Manali
+08:00 PM → 06:00 AM
+Duration: 10h
+Seats Left: 18
+₹1200
+Book Bus
+Volvo Travels
+Delhi → Jaipur
+07:00 AM → 01:00 PM
+Duration: 6h
+Seats Left: 22
+₹850
+Book Bus
+Orange Tours
+Mumbai → Pune
+09:00 AM → 01:00 PM
+Duration: 4h
+Seats Left: 15
+₹700
+Book Bus
+MiniBus Express
+Delhi → Mumbai
+08:00 PM → 10:00 AM
+Duration: 14h
+Seats Left: 18
+₹2500
+Book Bus
+Lak Travels
+Delhi → Lucknow
+07:00 AM → 07:00 PM
+Duration: 12h
+Seats Left: 22
+₹1250
+Book Bus
+Orange Tours
+Mumbai → Delhi
+09:00 AM → 12:00 Noon
+Duration: 14h
+Seats Left: 15
+₹3000
+Book Bus
+6 Buses Found
+bug_found: True
+execution_time: 0.28
+confidence: 95
+timestamp: 2026-07-01 11:31:42
+screenshot: screenshots/bus_booking_negative_passengers_20260701_113142.png

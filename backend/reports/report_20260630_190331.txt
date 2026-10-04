@@ -1,0 +1,9 @@
+module: hotel
+scenario: cancel_booking
+expected: Booking Cancelled
+actual: Booking Not Found
+bug_found: True
+execution_time: 0.11
+confidence: 95
+timestamp: 2026-06-30 19:03:31
+screenshot: screenshots/hotel_cancel_booking_20260630_190331.png

@@ -1,0 +1,9 @@
+module: bus
+scenario: negative_value
+expected: Passenger count must be greater than 0
+actual: Results Found
+bug_found: True
+execution_time: 0.14
+confidence: 95
+timestamp: 2026-07-01 11:31:16
+screenshot: screenshots/bus_negative_value_20260701_113116.png

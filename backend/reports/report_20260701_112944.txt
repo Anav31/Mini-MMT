@@ -1,0 +1,72 @@
+module: flight
+scenario: booking_negative_passengers
+expected: Passenger count must be greater than 0
+actual: Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Flights
+Search Flights
+IndiGo
+✈ Delhi → Mumbai
+08:00
+─────
+10:00
+Duration: 2h
+Seats Left: 40
+₹5000
+Book Now
+Air India
+✈ Delhi → Mumbai
+12:00
+─────
+14:00
+Duration: 2h
+Seats Left: 35
+₹6200
+Book Now
+SpiceJet
+✈ Delhi → Mumbai
+18:00
+─────
+20:15
+Duration: 2h 15m
+Seats Left: 20
+₹4800
+Book Now
+Vistara
+✈ Delhi → Goa
+09:00
+─────
+11:30
+Duration: 2h 30m
+Seats Left: 25
+₹7200
+Book Now
+Akasa Air
+✈ Mumbai → Bangalore
+07:00
+─────
+09:00
+Duration: 2h
+Seats Left: 30
+₹5400
+Book Now
+AirAsia
+✈ Bangalore → Goa
+13:00
+─────
+14:30
+Duration: 1h 30m
+Seats Left: 28
+₹4500
+Book Now
+6 Flights Found
+bug_found: True
+execution_time: 0.21
+confidence: 95
+timestamp: 2026-07-01 11:29:44
+screenshot: screenshots/flight_booking_negative_passengers_20260701_112944.png

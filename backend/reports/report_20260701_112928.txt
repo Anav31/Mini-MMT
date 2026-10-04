@@ -1,0 +1,9 @@
+module: flight
+scenario: zero_value
+expected: Passenger count must be greater than 0
+actual: Results Found
+bug_found: True
+execution_time: 0.18
+confidence: 95
+timestamp: 2026-07-01 11:29:28
+screenshot: screenshots/flight_zero_value_20260701_112928.png

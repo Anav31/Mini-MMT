@@ -1,0 +1,9 @@
+module: hotel
+scenario: cancel_invalid_booking
+expected: Unknown
+actual: Results Found
+bug_found: True
+execution_time: 0.1
+confidence: 95
+timestamp: 2026-06-30 19:03:36
+screenshot: screenshots/hotel_cancel_invalid_booking_20260630_190336.png

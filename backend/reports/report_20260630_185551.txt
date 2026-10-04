@@ -1,0 +1,9 @@
+module: flight
+scenario: special_characters
+expected: No Results
+actual: No Flights Found
+bug_found: True
+execution_time: 0.17
+confidence: 95
+timestamp: 2026-06-30 18:55:51
+screenshot: screenshots/flight_special_characters_20260630_185551.png

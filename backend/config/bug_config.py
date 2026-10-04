@@ -6,7 +6,7 @@ BUG_CONFIG = {
 
     "allow_negative_rooms": False,
 
-    "allow_past_stay_date": False,
+    "allow_past_stay_date": True,
 
     "allow_bus_overbooking": False,
 

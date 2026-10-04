@@ -1,0 +1,9 @@
+module: flight
+scenario: booking_flow
+expected: Booking Success
+actual: Booking Success
+bug_found: False
+execution_time: 0.15
+confidence: 100
+timestamp: 2026-06-30 18:55:19
+screenshot: screenshots/flight_booking_flow_20260630_185519.png

@@ -1,0 +1,9 @@
+module: train
+scenario: cancel_invalid_booking
+expected: Unknown
+actual: Results Found
+bug_found: True
+execution_time: 0.15
+confidence: 95
+timestamp: 2026-06-30 19:01:45
+screenshot: screenshots/train_cancel_invalid_booking_20260630_190144.png

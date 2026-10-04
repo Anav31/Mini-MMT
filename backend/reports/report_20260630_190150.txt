@@ -1,0 +1,9 @@
+module: hotel
+scenario: normal_flow
+expected: Results Found
+actual: Results Found
+bug_found: False
+execution_time: 0.13
+confidence: 100
+timestamp: 2026-06-30 19:01:50
+screenshot: screenshots/hotel_normal_flow_20260630_190150.png

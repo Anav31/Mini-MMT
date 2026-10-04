@@ -1,0 +1,74 @@
+module: hotel
+scenario: booking_negative_passengers
+expected: Passenger count must be greater than 0
+actual: Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Hotels 🏨
+Search Hotels
+Taj Palace
+📍 Delhi
+Room Type: Deluxe
+Rating: ⭐ 4.8
+Rooms Left: 20
+₹8500
+Book Hotel
+Oberoi Grand
+📍 Mumbai
+Room Type: Suite
+Rating: ⭐ 4.7
+Rooms Left: 15
+₹12000
+Book Hotel
+ITC Royal
+📍 Bangalore
+Room Type: Standard
+Rating: ⭐ 4.5
+Rooms Left: 25
+₹6000
+Book Hotel
+Leela Palace
+📍 Chennai
+Room Type: Deluxe
+Rating: ⭐ 4.6
+Rooms Left: 18
+₹7500
+Book Hotel
+Radisson Blu
+📍 Hyderabad
+Room Type: Suite
+Rating: ⭐ 4.4
+Rooms Left: 12
+₹9500
+Book Hotel
+Holiday Inn
+📍 Goa
+Room Type: Standard
+Rating: ⭐ 4.3
+Rooms Left: 30
+₹5500
+Book Hotel
+Marriott
+📍 Pune
+Room Type: Deluxe
+Rating: ⭐ 4.7
+Rooms Left: 22
+₹8200
+Book Hotel
+Vivanta
+📍 Jaipur
+Room Type: Suite
+Rating: ⭐ 4.5
+Rooms Left: 14
+₹9800
+Book Hotel
+8 Hotels Found
+bug_found: True
+execution_time: 0.2
+confidence: 95
+timestamp: 2026-07-01 11:35:11
+screenshot: screenshots/hotel_booking_negative_passengers_20260701_113511.png

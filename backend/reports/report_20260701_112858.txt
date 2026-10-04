@@ -1,0 +1,9 @@
+module: flight
+scenario: empty_text
+expected: Field Required
+actual: Results Found
+bug_found: True
+execution_time: 0.28
+confidence: 95
+timestamp: 2026-07-01 11:28:58
+screenshot: screenshots/flight_empty_text_20260701_112858.png

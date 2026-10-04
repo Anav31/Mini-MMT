@@ -1,0 +1,9 @@
+module: bus
+scenario: cancel_booking
+expected: Booking Cancelled
+actual: Booking Cancelled
+bug_found: False
+execution_time: 0.12
+confidence: 100
+timestamp: 2026-06-30 18:57:36
+screenshot: screenshots/bus_cancel_booking_20260630_185736.png

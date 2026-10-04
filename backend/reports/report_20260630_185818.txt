@@ -1,0 +1,9 @@
+module: bus
+scenario: zero_value
+expected: Passenger count must be greater than 0
+actual: Results Found
+bug_found: True
+execution_time: 0.09
+confidence: 95
+timestamp: 2026-06-30 18:58:18
+screenshot: screenshots/bus_zero_value_20260630_185818.png

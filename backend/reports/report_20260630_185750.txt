@@ -1,0 +1,9 @@
+module: bus
+scenario: special_characters
+expected: No Results
+actual: No Buses Found
+bug_found: True
+execution_time: 0.11
+confidence: 95
+timestamp: 2026-06-30 18:57:50
+screenshot: screenshots/bus_special_characters_20260630_185749.png

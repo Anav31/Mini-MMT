@@ -1,0 +1,88 @@
+module: train
+scenario: booking_negative_passengers
+expected: Passenger count must be greater than 0
+actual: Mini MMT
+Flights
+Buses
+Trains
+Hotels
+My Bookings
+Logout
+Search Trains 🚂
+Search Trains
+Rajdhani Express
+Delhi → Mumbai
+04:00 PM → 08:00 AM
+Duration: 16h
+Seats Left: 120
+₹2200
+Book Train
+Shatabdi Express
+Delhi → Chandigarh
+06:00 AM → 09:30 AM
+Duration: 3h 30m
+Seats Left: 80
+₹950
+Book Train
+Duronto Express
+Mumbai → Pune
+08:00 AM → 11:00 AM
+Duration: 3h
+Seats Left: 90
+₹750
+Book Train
+Garib Rath
+Delhi → Jaipur
+10:00 PM → 04:00 AM
+Duration: 6h
+Seats Left: 100
+₹650
+Book Train
+Vande Bharat
+Delhi → Varanasi
+06:00 AM → 02:00 PM
+Duration: 8h
+Seats Left: 70
+₹1800
+Book Train
+Tejas Express
+Mumbai → Goa
+07:00 AM → 03:00 PM
+Duration: 8h
+Seats Left: 60
+₹1900
+Book Train
+Humsafar Express
+Ahmedabad → Bangalore
+05:00 PM → 11:00 AM
+Duration: 18h
+Seats Left: 110
+₹2400
+Book Train
+Jan Shatabdi
+Chennai → Bangalore
+07:00 AM → 01:00 PM
+Duration: 6h
+Seats Left: 95
+₹850
+Book Train
+Intercity Express
+Lucknow → Kanpur
+09:00 AM → 11:30 AM
+Duration: 2h 30m
+Seats Left: 85
+₹400
+Book Train
+Superfast Express
+Hyderabad → Chennai
+08:00 PM → 07:00 AM
+Duration: 11h
+Seats Left: 130
+₹1500
+Book Train
+10 Trains Found
+bug_found: True
+execution_time: 0.17
+confidence: 95
+timestamp: 2026-07-01 11:33:40
+screenshot: screenshots/train_booking_negative_passengers_20260701_113340.png

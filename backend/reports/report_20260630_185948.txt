@@ -1,0 +1,9 @@
+module: train
+scenario: cancel_booking
+expected: Booking Cancelled
+actual: Booking Cancelled
+bug_found: False
+execution_time: 0.14
+confidence: 100
+timestamp: 2026-06-30 18:59:48
+screenshot: screenshots/train_cancel_booking_20260630_185948.png

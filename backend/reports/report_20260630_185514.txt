@@ -1,0 +1,9 @@
+module: flight
+scenario: normal_flow
+expected: Results Found
+actual: Results Found
+bug_found: False
+execution_time: 0.73
+confidence: 100
+timestamp: 2026-06-30 18:55:14
+screenshot: screenshots/flight_normal_flow_20260630_185513.png

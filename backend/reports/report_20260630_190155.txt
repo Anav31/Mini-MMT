@@ -1,0 +1,9 @@
+module: hotel
+scenario: booking_flow
+expected: Booking Success
+actual: Booking Success
+bug_found: False
+execution_time: 0.12
+confidence: 100
+timestamp: 2026-06-30 19:01:55
+screenshot: screenshots/hotel_booking_flow_20260630_190155.png
